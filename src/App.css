@@ -1,7 +1,23 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
+.my-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #94f17a;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.my-button:hover {
+    transform: scale(0.9);
+    background-color: #7bcd64;
+}
+
+.my-button:active {
+    transform: scale(0.8);
+    background-color: #6cb158;
+}
