@@ -1,7 +1,8 @@
-import { Button, Carousel, Layout, Space } from '@douyinfe/semi-ui';
-import easy_to_use_img from './assets/easy_to_use.png';
-import player_list_page_img from './assets/player_list_page.png';
-import player_trends_page_img from './assets/player_trends_page.png';
+import { Carousel, Col, Layout, Row, Space } from '@douyinfe/semi-ui';
+import p1 from './assets/get_started.png';
+import p2 from './assets/player_detail.png';
+import p3 from './assets/player_list.png';
+import p4 from './assets/player_trends.png';
 import './App.css';
 
 const { Header, Footer, Content } = Layout;
@@ -12,16 +13,29 @@ function goToApp() {
 
 function App() {
   const imgList = [
-    { img: easy_to_use_img, text: 'Easy to use' },
-    { img: player_list_page_img, text: 'Player List Page' },
-    { img: player_trends_page_img, text: 'Player Trends Page' },
+    { img: p4, text: '' },
+    { img: p1, text: '' },
+    { img: p2, text: '' },
+    { img: p3, text: '' },
   ];
 
   return (
     <Layout className="components-layout-demo">
       <Header style={{ height: '61px', backgroundColor: '#151616' }}>
-        <Space>
-          <div>
+        <Space
+          style={{
+            height: '100%',
+            width: '100%',
+          }}
+          spacing={'medium'}
+          align={'center'}
+        >
+          <div
+            style={{
+              marginLeft: '20px',
+              fontSize: '1.5rem',
+            }}
+          >
             <span style={{ color: '#FFF' }}>FC</span>
             <span style={{ color: '#FFF' }}>Career</span>
             <span style={{ color: '#FFF' }}>.top</span>
@@ -29,6 +43,9 @@ function App() {
 
           <div
             className="my-button"
+            style={{
+              marginRight: '20px',
+            }}
             onClick={() => {
               goToApp();
             }}
@@ -39,33 +56,46 @@ function App() {
       </Header>
 
       <Content style={{ width: '100%' }}>
-        <Carousel
+        <Space
           style={{
             width: '100%',
-            height: '500px',
+            backgroundColor: '#323232',
           }}
-          theme={'light'}
-          autoPlay={false}
+          align={'center'}
+          vertical
         >
-          {imgList.map((data, index) => {
-            return (
-              <div
-                key={index}
-                style={{
-                  backgroundSize: 'cover',
-                  backgroundImage: `url('${data.img}')`,
-                }}
-              ></div>
-            );
-          })}
-        </Carousel>
+          <Carousel
+            style={{
+              width: '1280px',
+              height: '600px',
+            }}
+            theme={'dark'}
+            autoPlay={{
+              interval: 3000,
+              hoverToPause: true,
+            }}
+          >
+            {imgList.map((data, index) => {
+              return (
+                <div
+                  key={index}
+                  style={{
+                    backgroundSize: 'cover',
+                    backgroundImage: `url('${data.img}')`,
+                  }}
+                ></div>
+              );
+            })}
+          </Carousel>
+        </Space>
+        {/* banner start -------------------------- */}
         <Space
           align={'center'}
           style={{
             height: '100px',
             width: '100%',
             color: '#fafafa',
-            backgroundColor: '#323232',
+            backgroundColor: '#151616',
             padding: '0 auto',
             margin: '0 auto',
           }}
@@ -78,21 +108,71 @@ function App() {
           >
             Dear Manager, Start Tracking Your Players' Progress!
           </h1>
-          <Button
+          <div
             className="my-button"
             onClick={() => {
               goToApp();
             }}
           >
             Start Now
-          </Button>
+          </div>
         </Space>
+        {/* banner end -------------------------- */}
+
+        {/* feature start -------------------------- */}
+        <div
+          className={'grid'}
+          style={{
+            width: '100%',
+            color: '#FFF',
+            backgroundColor: '#151616',
+          }}
+        >
+          <Row>
+            <Col span={8}>
+              <Space className="col-content" vertical>
+                <h1>Experience Fully Automated Efficiency</h1>
+                <p>
+                  Import the code just once and say goodbye to tedious manual
+                  input—streamline your processes effortlessly!
+                </p>
+              </Space>
+            </Col>
+            <Col span={8}>
+              <div className="col-content">
+                <h1>Unlock Comprehensive Tracking</h1>
+                <p>
+                  Continuously monitor your players' growth data to gain clear
+                  insights into their development journey over past seasons.
+                </p>
+              </div>
+            </Col>
+            <Col span={8}>
+              <div className="col-content">
+                <h1>Stay Ahead with Proactive Notifications</h1>
+                <p>
+                  Receive instant updates on players' potential and abilities,
+                  letting the app assist you in keeping a close eye on your
+                  team’s performance.
+                </p>
+                {/*
+                <h1>
+                 保持领先，获得主动通知
+                </h1>
+                <p>
+                  及时了解球员的潜力和能力，让应用程序帮助您密切关注球队的表现。
+                </p>
+                */}
+              </div>
+            </Col>
+          </Row>
+          <br />
+        </div>
       </Content>
       <Footer
         style={{
-          height: '200px',
-          backgroundColor: '#1e1f1f',
           color: '#fff',
+          padding: '20px',
         }}
       >
         <Space
@@ -103,7 +183,56 @@ function App() {
             width: '100%',
           }}
         >
-          CopyRight © 2024 FC-Career-Dashboard
+          <div>CopyRight © 2024 FC-Career-Dashboard</div>
+          <div
+            style={{
+              marginTop: '10px',
+            }}
+          >
+            <span style={{ fontWeight: 'bold' }}>Email: </span>
+            <span
+              onClick={() => {
+                window.open('mailto:support@fccareer.top');
+              }}
+              style={{
+                color: '#fff',
+                cursor: 'pointer',
+              }}
+            >
+              support@fccareer.top
+            </span>
+          </div>
+          <div>
+            <span style={{ fontWeight: 'bold' }}>Discord: </span>
+            <span
+              onClick={() => {
+                window.open('https://discord.gg/aKfWAtbJ8F', '_blank');
+              }}
+              style={{
+                color: '#fff',
+                cursor: 'pointer',
+              }}
+            >
+              https://discord.gg/aKfWAtbJ8F
+            </span>
+          </div>
+          <div>
+            <span style={{ fontWeight: 'bold' }}>Github: </span>
+            <span
+              onClick={() => {
+                window.open(
+                  'https://github.com/VeejaLiu/FIFA-Career-Dashboard-Frontend',
+                  '_blank',
+                );
+              }}
+              style={{
+                color: '#fff',
+                cursor: 'pointer',
+              }}
+            >
+              VeejaLiu/FIFA-Career-Dashboard-Frontend
+            </span>
+          </div>
         </Space>
       </Footer>
     </Layout>
