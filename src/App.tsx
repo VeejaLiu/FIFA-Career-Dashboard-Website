@@ -14,9 +14,9 @@ function goToApp() {
 function App() {
   const imgList = [
     { img: p4, text: '' },
-    { img: p1, text: '' },
-    { img: p2, text: '' },
     { img: p3, text: '' },
+    { img: p2, text: '' },
+    { img: p1, text: '' },
   ];
 
   return (
@@ -71,7 +71,7 @@ function App() {
             }}
             theme={'dark'}
             autoPlay={{
-              interval: 3000,
+              interval: 2000,
               hoverToPause: true,
             }}
           >
