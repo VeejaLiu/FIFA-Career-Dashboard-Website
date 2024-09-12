@@ -1,8 +1,10 @@
 import { Carousel, Col, Layout, Row, Space } from '@douyinfe/semi-ui';
-import p1 from './assets/get_started.png';
-import p2 from './assets/player_detail.png';
-import p3 from './assets/player_list.png';
-import p4 from './assets/player_trends.png';
+import p1 from './assets/get_started.webp';
+import p2 from './assets/player_detail.webp';
+import p3 from './assets/player_list.webp';
+import p4 from './assets/player_trends.webp';
+import webLogo from './assets/website-logo.png';
+
 import './App.css';
 
 const { Header, Footer, Content } = Layout;
@@ -30,9 +32,17 @@ function App() {
           spacing={'medium'}
           align={'center'}
         >
-          <div
+          <img
+            src={webLogo}
+            alt="logo"
             style={{
               marginLeft: '20px',
+              height: '40px',
+            }}
+          />
+          <div
+            style={{
+              marginLeft: '1px',
               fontSize: '1.5rem',
             }}
           >
@@ -106,7 +116,7 @@ function App() {
               margin: '0 auto',
             }}
           >
-            Dear Manager, Start Tracking Your Players' Progress!
+            Dear Coach, are you ready to start conquering the football world?
           </h1>
           <div
             className="my-button"
