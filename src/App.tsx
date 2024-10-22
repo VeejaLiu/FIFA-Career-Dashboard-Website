@@ -1,8 +1,11 @@
 import { Carousel, Col, Layout, Row, Space } from '@douyinfe/semi-ui';
-import p1 from './assets/get_started.webp';
-import p2 from './assets/player_detail.webp';
-import p3 from './assets/player_list.webp';
-import p4 from './assets/player_trends.webp';
+import get_started_image from './assets/get_started.webp';
+import player_detail_image from './assets/player_detail.webp';
+import player_list_image from './assets/player_list.webp';
+import player_trends_image from './assets/player_trends.webp';
+import settings_image from './assets/settings.webp';
+import notifation_image from './assets/notification.webp';
+
 import webLogo from './assets/website-logo.png';
 
 import './App.css';
@@ -15,10 +18,18 @@ function goToApp() {
 
 function App() {
   const imgList = [
-    { img: p4, text: '' },
-    { img: p3, text: '' },
-    { img: p2, text: '' },
-    { img: p1, text: '' },
+    { img: player_list_image, text: 'All player list in FC24 / FC25 ' },
+    { img: player_detail_image, text: 'all player details in FC24 / FC25' },
+    { img: player_trends_image, text: 'All player trends in FC24 / FC25' },
+    {
+      img: notifation_image,
+      text: 'notification when player overall rating updated, potential updated, skill moves updated, weak foot updated, etc.',
+    },
+    { img: get_started_image, text: 'easy to get started' },
+    {
+      img: settings_image,
+      text: 'Rich settings options to customize your notifications.',
+    },
   ];
 
   return (
@@ -165,14 +176,6 @@ function App() {
                   letting the app assist you in keeping a close eye on your
                   team’s performance.
                 </p>
-                {/*
-                <h1>
-                 保持领先，获得主动通知
-                </h1>
-                <p>
-                  及时了解球员的潜力和能力，让应用程序帮助您密切关注球队的表现。
-                </p>
-                */}
               </div>
             </Col>
           </Row>
