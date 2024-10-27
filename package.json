@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint FIFA-Career-Dashboard-Website",
     "preview": "vite preview",
-    "preview-expose": "vite preview --expose"
+    "preview-expose": "vite preview --host --port 3000"
   },
   "dependencies": {
     "@douyinfe/semi-ui": "^2.65.0",
