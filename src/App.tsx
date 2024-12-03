@@ -4,7 +4,7 @@ import player_detail_image from './assets/player_detail.webp';
 import player_list_image from './assets/player_list.webp';
 import player_trends_image from './assets/player_trends.webp';
 import settings_image from './assets/settings.webp';
-import notifation_image from './assets/notification.webp';
+import notification_image from './assets/notification.webp';
 
 import webLogo from './assets/website-logo.png';
 
@@ -22,7 +22,7 @@ function App() {
     { img: player_detail_image, text: 'all player details in FC24 / FC25' },
     { img: player_trends_image, text: 'All player trends in FC24 / FC25' },
     {
-      img: notifation_image,
+      img: notification_image,
       text: 'notification when player overall rating updated, potential updated, skill moves updated, weak foot updated, etc.',
     },
     { img: get_started_image, text: 'easy to get started' },
