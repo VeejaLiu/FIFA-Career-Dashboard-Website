@@ -5,6 +5,7 @@ import webLogo from './assets/website-logo.png';
 import './App.css';
 import Homepage from './homepage/Homepage.tsx';
 import { ChangeLogsPage } from './change-logs/ChangeLogsPage.tsx';
+import ContactUsPage from './contact-us/ContactUsPage.tsx';
 
 const { Header, Footer, Content } = Layout;
 
@@ -48,7 +49,7 @@ function App() {
               </div>
             </Link>
 
-            <Link to="/changelogs" style={{ textDecoration: 'none' }}>
+            <Link to="/change-logs" style={{ textDecoration: 'none' }}>
               <div
                 style={{
                   marginLeft: '10px',
@@ -74,6 +75,34 @@ function App() {
                 Change logs
               </div>
             </Link>
+
+            <Link to="/contact-us" style={{ textDecoration: 'none' }}>
+              <div
+                style={{
+                  marginLeft: '10px',
+                  color: '#FFF',
+                  cursor: 'pointer',
+                  fontSize: '0.9rem',
+                  padding: '10px 5px',
+                  fontWeight: 'bold',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#FFF';
+                  e.currentTarget.style.backgroundColor = '#252626';
+                  // bottom border #94f17a
+                  e.currentTarget.style.borderBottom = '2px solid #94f17a';
+                }}
+                onMouseLeave={(e) => {
+                  // Reset background color
+                  e.currentTarget.style.backgroundColor = '';
+                  // Reset bottom border
+                  e.currentTarget.style.borderBottom = '';
+                }}
+              >
+                Contact us
+              </div>
+            </Link>
+
             <div
               className="my-button"
               style={{
@@ -91,7 +120,8 @@ function App() {
         <Content style={{ width: '100%' }}>
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/changelogs" element={<ChangeLogsPage />} />
+            <Route path="/change-logs" element={<ChangeLogsPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
           </Routes>
         </Content>
         <Footer
