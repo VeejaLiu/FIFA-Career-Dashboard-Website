@@ -18,7 +18,7 @@ export function ChangeLogsPage() {
           margin: '0 auto',
           padding: '20px',
           paddingBottom: '140px',
-          backgroundColor: 'antiquewhite',
+          backgroundColor: '#fcfcfc',
         }}
         spacing={40}
       >
