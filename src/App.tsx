@@ -99,7 +99,7 @@ function App() {
                   e.currentTarget.style.borderBottom = '';
                 }}
               >
-                Contact us
+                Contact
               </div>
             </Link>
 
