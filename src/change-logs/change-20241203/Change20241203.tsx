@@ -3,9 +3,9 @@ import golden_player from '../../assets/changelogs/20241203/golden_player.webp';
 
 export function Change20241203() {
   const rawString = `
-### New Feature: **🏅 Golden player.**
+# New Feature: **🏅 Golden player.**
 
-#### 2024-12-03
+## 2024-12-03
 
 I often wonder who the most promising players are in my team for a specific position, and who currently has the highest ability rating.
 
@@ -15,10 +15,10 @@ In fact, we will set markers for the top three players in a position, which are 
 `;
 
   return (
-    <>
+    <div style={{ width: '90%' }}>
       <MarkdownRender raw={rawString} />
       <Image width={800} src={golden_player} />
-    </>
+    </div>
   );
 }
 

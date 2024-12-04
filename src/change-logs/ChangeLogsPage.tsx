@@ -17,14 +17,12 @@ export function ChangeLogsPage() {
           maxWidth: '1280px',
           margin: '0 auto',
           padding: '20px',
-          backgroundColor: 'antiquewhite',
           paddingBottom: '140px',
+          backgroundColor: 'antiquewhite',
         }}
         spacing={40}
       >
-        <h1>Change logs</h1>
         <Change20241203 />
-
         <Change20240905 />
       </Space>
     </Space>
