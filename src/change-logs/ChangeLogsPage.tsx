@@ -3,7 +3,12 @@ import { Space } from '@douyinfe/semi-ui';
 
 export function ChangeLogsPage() {
   return (
-    <Space style={{ width: '100%' }}>
+    <Space
+      style={{
+        width: '100%',
+        marginBottom: '50px',
+      }}
+    >
       <Space
         vertical
         style={{
@@ -12,6 +17,7 @@ export function ChangeLogsPage() {
           margin: '0 auto',
           padding: '20px',
           backgroundColor: 'antiquewhite',
+          paddingBottom: '140px',
         }}
         spacing={40}
       >

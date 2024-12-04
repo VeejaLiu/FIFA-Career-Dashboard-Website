@@ -52,16 +52,23 @@ function App() {
               <div
                 style={{
                   marginLeft: '10px',
-                  color: '#B0B0B0',
-                  textDecoration: 'underline',
+                  color: '#FFF',
                   cursor: 'pointer',
-                  transition: 'color 0.3s',
+                  fontSize: '0.9rem',
+                  padding: '10px 5px',
+                  fontWeight: 'bold',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.color = '#FFF';
+                  e.currentTarget.style.backgroundColor = '#252626';
+                  // bottom border #94f17a
+                  e.currentTarget.style.borderBottom = '2px solid #94f17a';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#B0B0B0';
+                  // Reset background color
+                  e.currentTarget.style.backgroundColor = '';
+                  // Reset bottom border
+                  e.currentTarget.style.borderBottom = '';
                 }}
               >
                 Change logs

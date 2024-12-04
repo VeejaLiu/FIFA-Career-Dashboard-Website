@@ -3,23 +3,24 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    height: 40px;
-    width: 200px;
+    height: 32px;
+    width: 140px;
     margin: 0 auto;
     color: #000;
     background-color: #94f17a;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-size: 0.9rem;
 }
 
 .my-button:hover {
-    transform: scale(0.9);
+    /*transform: scale(0.9);*/
     background-color: #7bcd64;
 }
 
 .my-button:active {
-    transform: scale(0.8);
+    /*transform: scale(0.8);*/
     background-color: #6cb158;
 }
 
